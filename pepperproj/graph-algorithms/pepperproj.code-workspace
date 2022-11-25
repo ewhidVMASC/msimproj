@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "pepperproj",
+			"path": ".."
+		},
+		{
+			"name": "msimproj-1",
+			"path": "../../msimproj-1"
+		}
+	],
+	"settings": {}
+}
