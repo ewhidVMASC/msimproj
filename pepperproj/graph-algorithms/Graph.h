@@ -9,24 +9,26 @@ using namespace std;
 typedef unordered_map<GraphNode* ,vector<GraphEdge*>> AdjacencyList;
 //Implemented Conversion from AdjacencyMatrix required representation to the underlying Edge Representation.
 typedef vector<vector<int>> AdjacencyMatrix;
-typedef std::vector < std::vector<int> > tAdjacencyMatrix;
 class Graph {
     AdjacencyMatrix adjacencyMatrix;
-    tAdjacencyMatrix adj;
     int numberOfVertices;
-    
     vector<GraphEdge*> edges;
     vector<GraphNode*> vertices;
 public:
 
     virtual ~Graph();
-    Graph(int numberOfVertices);
-    vector<string> splitString(const string &s, char delimiter);
-    bool read_file();
-    void addEdge(int i, int j, int value);
-    bool isEdge(int i, int j);
-    string toString() const;
     
+    Graph(int numberOfVertices,AdjacencyMatrix adjacencyMatrix);
+    bool read_file();
+    string toString() const;
+    void createNodes();
+    void createEdges();
+    vector<string> splitString(const string &s, char delimiter);
+    const vector<GraphNode *> &getVertices() const;
+    GraphNode* addNode(int index);
+    GraphEdge addEdge(GraphNode *node1,GraphNode *node2,float weight);
+    vector<GraphEdge>* primAlgorithm(GraphNode* node);
+    vector<GraphEdge>* dijkstraAlgorithm(GraphNode* node);
 private:
     void printParents(int index,int sourceIndex,int *parentVertices);
     // To compare two edges

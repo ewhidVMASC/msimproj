@@ -4,7 +4,6 @@ GraphEdge::GraphEdge(int weight, GraphNode *Node1, GraphNode *Node2) {
     this->Node2 = Node2;
     this->weight = weight;
 }
-
 //Operator Over-ride in order to check if 2 edges are equal we check all the possible combinations of nodes.
 bool GraphEdge::operator==(GraphEdge *edge) {
     if (edge->Node1 == Node1) {

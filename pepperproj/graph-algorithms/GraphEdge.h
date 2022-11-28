@@ -14,7 +14,6 @@ private:
     GraphNode *Node1,*Node2;
 public:
     GraphEdge( int weight,  GraphNode *Node1,  GraphNode *Node2);
-    
     //Simple Getter methods for variables.
     int getWeight() ;
     GraphNode *getNode1();

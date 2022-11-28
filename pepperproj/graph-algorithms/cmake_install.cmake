@@ -1,4 +1,4 @@
-# Install script for directory: /home/pepper/msimfinalproject/msimproject/graph-algorithms
+# Install script for directory: /home/pepper/msim_final/msimproj/pepperproj/graph-algorithms
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pepper/msimfinalproject/msimproject/graph-algorithms/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pepper/msim_final/msimproj/pepperproj/graph-algorithms/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
