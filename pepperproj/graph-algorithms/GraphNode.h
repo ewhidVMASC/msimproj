@@ -1,19 +1,25 @@
-#include "GraphNode.h"
-GraphNode::GraphNode(int nodeIndex) {
-    this->nodeIndex=nodeIndex;
-}
+#ifndef GRAPHALGORITHMS_GRAPHNODE_H
+#define GRAPHALGORITHMS_GRAPHNODE_H
+#include <vector>
 
-vector<GraphEdge *> &GraphNode::getEdges()  {
-    return edges;
-}
+//resolving a circular dependency by calling class GraphEdge instead of include "GraphEdge.h"
+class GraphEdge;
+using namespace std;
+class GraphNode {
+    //Each GraphNode holds a vector of edges that it is connect with.
+    vector<GraphEdge*> edges;
+    //node index that recognizes the node.
+    int nodeIndex;
+   // string name;
+public:
+    GraphNode(int nodeIndex);
+    vector<GraphEdge *> &getEdges() ;
+    void setEdges(const vector<GraphEdge *> &edges);
+    int getNodeIndex() ;
+};
 
-void GraphNode::setEdges(const vector<GraphEdge *> &edges) {
-    GraphNode::edges = edges;
-}
+#endif //GRAPHALGORITHMS_GRAPHNODE_H
 
-int GraphNode::getNodeIndex()  {
-    return nodeIndex;
-}
 
 
 
